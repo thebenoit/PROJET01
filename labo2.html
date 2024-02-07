@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Labo 02</h1>
+
+    <form method="POST" action="#" onsubmit="afficherResultat(); return false;">
+      Valeur en pouce à:
+      <input type="text" name="valeurPouce" id="valeurP" /><br />
+      <input
+        type="button"
+        value="converti en centimètre"
+        onclick="afficherResultat(convertirCm)"
+      />
+      <input
+        type="button"
+        value="converti en pouces"
+        onclick="afficherResultat(convertirPouces)"
+      />
+      <input
+        type="button"
+        value="converti en Celsius"
+        onclick="afficherResultat(convertirfahrenhiet)"
+      />
+      <input
+        type="button"
+        value="converti en fahrenhiet"
+        onclick="afficherResultat(convertirCelsius)"
+      />
+      <br />
+      <br />
+      Résultat: <span id="resultats"></span>
+    </form>
+
+    <script>
+      //fonction qui converti de tel a tel
+      function convertirfahrenhiet(v) {
+        return (v * 9) / 5 + 32;
+      }
+      function convertirCelsius(v) {
+        return ((v - 32) * 5) / 9;
+      }
+      function convertirPouces(v) {
+        return v / 2.54;
+      }
+
+      function convertirCm(v) {
+        return v * 2.54;
+      }
+      //fonction qui affiche les résultat
+      function afficherResultat(convertir) {
+        //prend la valeur input et le mets dans la constante
+        const elementAConvertir = document.getElementById("valeurP");
+        const resultatElement = document.getElementById("resultats");
+
+        const valeur = parseFloat(elementAConvertir.value);
+        const valeurConverti =  convertir(valeur);
+
+        resultatElement.textContent = valeurConverti;
+      }
+    </script>
+  </body>
+</html>

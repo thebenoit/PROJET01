@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Labo 1</h1>
+
+    <form method="POST" action="#" onsubmit="afficherResultat(); return false;">
+        Valeur en pouce à convertir: <input type="text" name="valeurPouce" id="valeurP"><br>
+        <input type="submit" value="converti en centimètre">
+        <br>
+        <br>
+        Résultat: <span id="resultats"></span>
+        
+
+    </form>
+
+    <script>
+
+        function  convertirCm(pouces){ return pouces * 2.54};
+
+        function afficherResultat(){
+
+            const elementAConvertir = document.getElementById('valeurP');
+            const resultatElement = document.getElementById('resultats')
+
+            const valeurEnPouces = parseFloat(elementAConvertir.value)
+            const valeurEnCentimetre = convertirCm(valeurEnPouces);
+
+            resultatElement.textContent = valeurEnCentimetre + 'cm'
+
+
+
+
+        }
+
+            
+        
+
+
+        
+    </script>
+
+
+</body>
+</html>

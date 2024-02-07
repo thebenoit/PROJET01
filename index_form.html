@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Accueil</h1>
+
+    <form method="POST" action="#" onsubmit=" return validerContenu()">
+        Login: <input type="text" name="login" id="monLogin" value="par defaut"><br>
+        Mot de passe: <input type="password" name="motDePasse" id="motPWD"><br>
+        <input type="submit" value="Valider">
+        <input type="reset" value="Rétablir">
+
+    </form>
+
+    <script>
+    
+    function validerContenu(){
+        const elementLogin = document.getElementById('monLogin');
+        console.log('login vaut:'+elementLogin.value);
+        // elementLogin.value = 'KEKE CHOSE';
+        const elementMotDePasse = document.getElementById('motPWD');
+        console.log('mot de passe vaut: '+elementMotDePasse.value);
+        alert('Bonjour '+ elementLogin.value);
+        return false;
+
+        }
+    </script>
+</body>
+</html>

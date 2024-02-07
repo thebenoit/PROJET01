@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: green;"></h1>
+    <script>
+
+//utilisation de map
+        const tabtemperature = [-15, -23, -37, -42, 24];
+        console.log(tabtemperature);
+        const tabtemp2 = tabtemperature.map((valeur)=>"<li>" +valeur+"</li>");
+        console.log(tabtemp2);
+
+        const tabNoms = ["Bob", "Paul", "Job", "Alex"]
+        const tabNomPara = tabNoms.map((nom, indice)=>`<li>${nom} est à l'indice ${indice}</li>` )
+        console.log(tabNomPara)
+
+        document.write("<ul>"+tabNomPara.join(" ")+"</ul>")
+        document.write("<p> 5e paragraphe</p>")
+        document.write("<p> 6e paragraphe</p>")
+        document.write(`<p> 7e paragraphe</p>`)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exemple 01</title>
+    <style>
+        p{padding: 5px;}
+
+        ol ol{
+            list-style-type:lower-alpha;
+        }
+
+        #listeAnime{
+            font-style:italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Accueil</h1>
+    <img id="monImage" src="image/Hormozi.jpeg" alt="chat" width="90px" >
+    <div id="ici" style="color: brown;">Du texte</div>
+    <a href="page2.html"> page 2</a>
+    <p>paragraphe01</p>
+    <p>p2</p>
+    <p>p3</p>
+    <p>p4</p>
+
+    <ol>
+
+        <li>Manga
+
+            <ol>
+                <li>Bersek</li>
+                <li>Vagabond</li>
+
+
+            </ol>
+         
+        </li>
+
+        <li id="listeAnime">Animé
+
+            <ol>
+                <li>Code gease</li>
+                <li>Angel Beats</li>
+            </ol>
+           
+        </li>
+    </ol>
+   
+
+    <script>
+
+        //remplacer image
+
+        const element = document.getElementById('ici');
+        const elementBody = document.getElementsByTagName('body')
+        elementBody[0].style.fontSize ='150%';
+        console.log(element.innerHTML);
+        element.innerHTML = '<p class="droite" > Salut tout le monde </p>';
+        const elementIMG = document.getElementById('monImage');
+        elementIMG.src = 'image/team.jpg';
+        //autre moyen plus rapide
+        elementIMG.setAttribute('src', 'image/SkyScrapper.jpg');
+
+        //changer les propriété
+        element.style.backgroundColor = 'yellow'
+        element.style.border = '1px solid'
+        element.style.fontSize = '50px'
+        element.style.borderBlockColor = 'red'
+        element.style.borderBlockEndColor = 'blue'
+        element.style.borderLeftStyle ='none'
+        element.style.padding = '10px'
+
+        const listeAnime2 = document.getElementById('listeAnime')
+        var animeLi = document.createElement('li')
+        var noeudTexte = document.createTextNode('Ajout de texte')
+        animeLi.appendChild(noeudTexte)
+        //listeAnime2.appendChild(animeLi)
+        //listeAnime2.innerHTML =  listeAnime2.innerHTML + '<li> ajout de texte(encore)</li>'
+
+
+
+
+
+        
+        
+  
+         
+
+
+    </script>
+</body>
+</html>
