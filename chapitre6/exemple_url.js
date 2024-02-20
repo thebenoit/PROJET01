@@ -15,4 +15,9 @@ monUrl.searchParams.forEach((valeur, cle) => console.log(`cle: ${cle}; valeur: $
 const tableauTemp = [-12, -8, 3, 8, 14, 28];
 tableauTemp.forEach((valeur, indice) => console.log(`indice: ${indice}: valeur: ${valeur}`))
 
+//exemple production  d'une liste non numérotée du genre <ul><li>-12</li><li>-8
+console.log('ul');
+tableauTemp.forEach((valeur, indice) => console.log(` <li>${valeur}</li>`))
+console.log(`</ul>`)
+
 

@@ -4,11 +4,13 @@
   "description": "",
   "main": "module01.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon serveur",
+    "start": "node serveur"
   },
-  "author": "Kemmy Will jerry benoit",
+  "author": "Kemmy Will jerry benoit ",
   "license": "ISC",
   "dependencies": {
+    "nodemon": "^3.0.3",
     "uuid": "^9.0.1"
   }
 }
